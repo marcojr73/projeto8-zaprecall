@@ -1,0 +1,19 @@
+
+import { useState } from "react"
+
+export default function Welcome(){
+    const [visible, setVisible] = useState(true)
+
+    function showQuestions(){
+        setVisible(false)
+    }
+        return(
+            visible === true ?
+            <section className="screen welcome">
+                <img id="light" src = "./assets/light.png" alt="light"/>
+                <h1 className= "zaprecall">ZapRecall</h1>
+                <button className="start" onClick={()=>showQuestions()}>Iniciar Recall</button>
+            </section> : <></>
+        )
+}
+

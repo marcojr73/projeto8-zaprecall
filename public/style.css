@@ -1,0 +1,132 @@
+body{
+    background-color: #FB6B6B;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.welcome{
+    /* display: none; */
+}
+
+#light{
+    margin-top: 10%;
+    width: 55px;
+    height: 65px;
+    margin-bottom: 10px;
+}
+
+.zaprecall{
+    font-family: Righteous;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.screen .zaprecall{
+    font-size: 25px;
+}
+
+.start{
+    font-family: "Recursive";
+    height: 31px;
+    width: 141px;
+    border-radius: 5px;
+    color: #D70900;
+    background-color: #FFFFFF;
+    border: 1px solid #D70900;
+    margin-top: 300px;
+}
+
+ /* //////////////////////////////////////////////////////////// */
+
+.questions{
+    height: 40px;
+    width: 182px;
+    background-color:  #FFFFFF;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    font-family: Recursive;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.questions p{
+    margin-right: 65px;
+}
+
+/* ////////////////////////////////////////////////////////////// */
+
+.deck{
+     margin-top: 22px;
+     /* display: none; */
+}
+
+.light{
+    height: 30px;   
+    width: 26px;    
+    margin-right: 10px;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 41px;
+}
+
+.top .zaprecall{
+    font-size: 20px;
+}
+
+.card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.face{
+    margin-top: 41px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all .9s;
+    transform-style: preserve-3d;
+    background-color: #FFFFFF;
+    width: 182px;
+    height: 40px;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+}
+
+.answer{
+    transform: rotateY(180deg);
+}
+
+.card:hover .answer {
+    transform: rotateY(0deg);
+}
+
+.card:hover .question {
+    transform: rotateY(-180deg);
+}
+
+/* ////////////////////////////////////////////// */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background-color: #FFFFFF;
+}
