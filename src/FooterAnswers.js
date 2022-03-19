@@ -1,14 +1,14 @@
-import { useState } from "react"
+// import { useState } from "react"
 
 export default function FooterAnswers(){
 
-    const [visible, setVisible] = useState(false);
+    // const [visible, setVisible] = useState(false);
 
     return(
-        visible === true ?
+        // visible === true ?
         <footer>
             <p></p>
         </footer>
-        : <></>
+        // : <></>
     )
 }

@@ -6,6 +6,15 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #FB6B6B;
+}
+
+main{
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 #light{
@@ -41,8 +50,7 @@ body{
  /* //////////////////////////////////////////////////////////// */
 
 .questions{
-    height: 40px;
-    width: 182px;
+    
     background-color:  #FFFFFF;
     margin-bottom: 5px;
     display: flex;
@@ -62,7 +70,7 @@ body{
 /* ////////////////////////////////////////////////////////////// */
 
 .deck{
-     margin-top: 22px;
+    margin-top: 22px;
 }
 
 .light{
@@ -83,9 +91,20 @@ body{
 }
 
 .card{
-    position: relative;
     display: flex;
     justify-content: center;
+    margin-bottom: 5px;
+}
+
+.ask{
+    background-color: #FFFFFF;
+    width: 182px;
+    height: 40px;
+}
+.askTxt{
+    background-color: #FFFFD5;
+    width: 182px;
+    height: 80px;
 }
 
 .face{
@@ -99,8 +118,6 @@ body{
     transition: all .9s;
     transform-style: preserve-3d;
     background-color: #FFFFD5;
-    width: 182px;
-    height: 80px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
 }
