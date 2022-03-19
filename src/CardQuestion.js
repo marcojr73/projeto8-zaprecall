@@ -15,8 +15,6 @@ const deck = deckStatic.sort(() => {
     return (Math.random() - 0.5);
 })
 
-console.log(deck);
-
 export default function CardQuestion() {
     return (
         <nav className="screen deck">
@@ -44,7 +42,7 @@ function Question() {
                 if (pos === index) {
                     return (
                         <section onClick={() => setPos(pos = index)} className="card askTxt">
-                            <QuestionAskTxt questions={deck}/>
+                            <QuestionAskTxt questions={deck} />
                         </section>)
                 } else {
                     return (
@@ -59,59 +57,31 @@ function Question() {
 
 function QuestionAsk(props) {
     return (
-            <div className="questions">
-                <p>Pergunta {props.index + 1}</p>
-                <ion-icon name="play-outline"></ion-icon>
-            </div>
+        <div className="questions">
+            <p>Pergunta {props.index + 1}</p>
+            <ion-icon name="play-outline"></ion-icon>
+        </div>
     )
 }
 
 function QuestionAskTxt(props) {
+    let [flip, setFlip] = useState("flip");
+
+    let css = `${flip} card`;
     return (
-        <>
-        <div className="question face">
-                                <p>{props.questions.questionsText}</p>
-                                <img src="./assets/reverse.png"/>
-        </div>
-        <div className="answer face">
-            <p>{props.questions.answers}</p>
-            <div className="options">
-                <div className="box wrong">Não lemprei</div>
-                <div className="box almost">Quase Não lembrei</div>
-                <div className="box zap">Zap</div>
+        <div className={css}>
+            <div onClick={()=>setFlip(flip = "")} className="question face">
+                <p>{props.questions.questionsText}</p>
+                <img src="./assets/reverse.png" />
+            </div>
+            <div className="answer face">
+                <p>{props.questions.answers}</p>
+                <div className="options">
+                    <div className="box wrong">Não lemprei</div>
+                    <div className="box almost">Quase Não lembrei</div>
+                    <div className="box zap">Zap</div>
+                </div>
             </div>
         </div>
-        </>
     )
 }
-
-
-
-// function Question() {
-//     const [select, setSelect] = useState(false);
-//     const css = `card ${select ? "select" : ""}`
-//     return (
-//         <>
-//             {deck.map((question, indice) => {
-//                 return (
-//                     <section onclick={()=>setSelect(!select)} className={css}>
-//                         <div className="questions">
-//                             <p>Pergunta {indice + 1}</p>
-//                             <ion-icon name="play-outline"></ion-icon>
-//                         </div>
-//                     </section>
-//                 )
-//             })}
-//         </>
-//     )
-// }
-
-
-{/* <div className="answer face">
-                            <p>{question.answers}</p>
-                            <div className="options">
-                                <div className="box wrong">Não lemprei</div>
-                                <div className="box almost">Quase Não lembrei</div>
-                                <div className="box zap">Zap</div>
-                            </div>
-                        </div> */}

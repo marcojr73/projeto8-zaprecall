@@ -61,6 +61,7 @@ main{
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
+    border-radius: 5px;
 }
 
 .questions p{
@@ -100,15 +101,18 @@ main{
     background-color: #FFFFFF;
     width: 182px;
     height: 40px;
+    border-radius: 5px;
 }
 .askTxt{
     background-color: #FFFFD5;
     width: 182px;
     height: 80px;
+    border-radius: 5px;
 }
 
 .face{
-    margin-top: 41px;
+    width: 182px;
+    height: 80px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,6 +124,23 @@ main{
     background-color: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+}
+
+.question{
+    transform: rotateY(180deg);
+}
+
+.answer{
+
+}
+
+.card{
+    transform-style: preserve-3d;
+    transition: all .8s;
+}
+
+.flip{
+    transform: rotateY(180deg);
 }
 
 .options{
@@ -145,23 +166,19 @@ main{
 .wrong{background-color: #FF3030;} .almost{background-color: #FF922E;} .zap{background-color: #2FBE34;}
 
 .question p{
-    align-self: flex-start;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-family: Recursive;
+    font-size: 12px;
 }
 
 .question img{
-    align-self: flex-end;
-}
-.answer{
-    transform: rotateY(180deg);
-}
-
-.card:hover .answer {
-    transform: rotateY(0deg);
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }
 
-.card:hover .question {
-    transform: rotateY(-180deg);
-}
 
 /* ////////////////////////////////////////////// */
 
