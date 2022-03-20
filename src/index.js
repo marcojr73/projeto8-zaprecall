@@ -11,7 +11,6 @@ function App(){
         <Welcome/>
         <main>
             <CardQuestion/>
-            <FooterAnswers/>
         </main>
     </>
     )

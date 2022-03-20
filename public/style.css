@@ -7,6 +7,8 @@ body{
     flex-direction: column;
     align-items: center;
     background-color: #FB6B6B;
+    height: 100vh;
+
 }
 
 main{
@@ -124,14 +126,11 @@ main{
     background-color: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
+    font-family: Recursive;
 }
 
 .question{
     transform: rotateY(180deg);
-}
-
-.answer{
-
 }
 
 .card{
@@ -164,12 +163,23 @@ main{
 }
 
 .wrong{background-color: #FF3030;} .almost{background-color: #FF922E;} .zap{background-color: #2FBE34;}
-
+#red{
+    text-decoration: line-through;
+    color: red;
+}
+#yellow{
+    text-decoration: line-through;
+    color: yellow;
+}
+#green{
+    text-decoration: line-through;
+    color: green;
+}
 .question p{
     position: absolute;
     top: 10px;
     left: 10px;
-    font-family: Recursive;
+    
     font-size: 12px;
 }
 
@@ -178,7 +188,9 @@ main{
     bottom: 10px;
     right: 10px;
 }
-
+#red{
+    color: red;
+}
 
 /* ////////////////////////////////////////////// */
 
@@ -188,4 +200,5 @@ footer{
     height: 50px;
     width: 100%;
     background-color: #FFFFFF;
+    text-align: center;
 }
