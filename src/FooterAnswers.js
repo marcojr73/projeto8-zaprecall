@@ -25,14 +25,14 @@ function Partial(props) {
 }
 
 function Finish(props) {
-    let {counter, hits, wrong} = props;
-    let message = wrong == true ? "Ainda faltam alguns, mas não desanime" : "Você não se esqueceu de nenhum flashcard!"
-    let feeling = wrong == true ? "./assets/sad.png" :"./assets/congratulations.png"
-    let result = wrong == true ? "Putz.." : "Parabéns!"
+    let {wrong} = props;
+    let message = wrong === true ? "Ainda faltam alguns, mas não desanime" : "Você não se esqueceu de nenhum flashcard!"
+    let feeling = wrong === true ? "./assets/sad.png" :"./assets/congratulations.png"
+    let result = wrong === true ? "Putz.." : "Parabéns!"
     return (
         <div className="congratulations">
             <div className="smile">
-                <img src={feeling}/>
+                <img src={feeling} alt="img"/>
                 <p>{result}</p>
             </div>
             <p>{message}</p>

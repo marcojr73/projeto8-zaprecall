@@ -60,9 +60,8 @@ function Question() {
 
 function QuestionAsk(props) {
     let { index, css } = props;
-    
-    // let [select, setSelected] = useState(false);
-    // console.log(css);
+    let [select, setSelected] = useState(true);
+    console.log(css);
 
 
     // if (css !== "") {
@@ -71,10 +70,9 @@ function QuestionAsk(props) {
     // }
 
     let color = css !== "" ? `questions ${css}`: "questions"
-
     return (
         <div className={color}  id={css}>
-            <p>{css} Pergunta {index + 1}</p>
+            <p>Pergunta {index + 1}</p>
             <ion-icon className="icon" name="play-outline"></ion-icon>
         </div>
     )
@@ -83,15 +81,16 @@ function QuestionAsk(props) {
 function QuestionAskTxt(props) {
     let { questions, setRisk, setCompleted, completed, setHits } = props;
     let [flip, setFlip] = useState("flip");
+    
     let css = `${flip} card`;
-    let red = <img src="./assets/red.png" />
-    let yellow = <img src="./assets/yellow.png" />
-    let green = <img src="./assets/green.png" />
+    let red = <img src="./assets/red.png" alt="color"/>
+    let yellow = <img src="./assets/yellow.png" alt="color"/>
+    let green = <img src="./assets/green.png" alt="color"/>
 
     function update(color, completed, imgHit) {
         setRisk(color);
         setCompleted(completed + 1);
-        if (color == "red") {
+        if (color === "red") {
             wrong = true;
         }
         arr.push(imgHit);
