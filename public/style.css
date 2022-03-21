@@ -2,13 +2,20 @@ body{
     background-color: #FB6B6B;
 }
 
-.screen {
+.screen{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     background-color: #FB6B6B;
-    height: 100vh;
+    height: 800px;
+}
 
+figure{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 main{
@@ -21,8 +28,8 @@ main{
 
 #light{
     margin-top: 10%;
-    width: 55px;
-    height: 65px;
+    width: 136px;
+    height: 161px;
     margin-bottom: 10px;
 }
 
@@ -35,24 +42,23 @@ main{
 }
 
 .screen .zaprecall{
-    font-size: 25px;
+    font-size: 36px;
 }
 
 .start{
     font-family: "Recursive";
-    height: 31px;
-    width: 141px;
+    height: 54px;
+    width: 246px;
     border-radius: 5px;
     color: #D70900;
     background-color: #FFFFFF;
     border: 1px solid #D70900;
-    margin-top: 300px;
+    font-size: 18px;
 }
 
  /* //////////////////////////////////////////////////////////// */
 
 .questions{
-    
     background-color:  #FFFFFF;
     margin-bottom: 5px;
     display: flex;
@@ -60,14 +66,17 @@ main{
     align-items: center;
     border-radius: 5px;
     font-family: Recursive;
-    font-size: 12px;
-    font-style: normal;
+    font-size: 16px;
     font-weight: 700;
     border-radius: 5px;
 }
 
 .questions p{
-    margin-right: 65px;
+    margin-right: 150px;
+}
+
+ion-icon{
+    font-size: 25px;
 }
 
 /* ////////////////////////////////////////////////////////////// */
@@ -77,20 +86,19 @@ main{
 }
 
 .light{
-    height: 30px;   
-    width: 26px;    
+    height: 60px;   
+    width: 52px;    
     margin-right: 10px;
 }
 
 .top{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-bottom: 41px;
+    /* margin-bottom: 41px; */
 }
 
 .top .zaprecall{
-    font-size: 20px;
+    font-size: 36px;
 }
 
 .card{
@@ -101,20 +109,20 @@ main{
 
 .ask{
     background-color: #FFFFFF;
-    width: 182px;
-    height: 40px;
-    border-radius: 5px;
+    width: 300px;
+    height: 65px;
+    border-radius: 8px;
 }
 .askTxt{
-    background-color: #FFFFD5;
-    width: 182px;
-    height: 80px;
+    width: 300px;
+    height: 131px;
     border-radius: 5px;
+    background-color: #FFFFD5;
 }
 
 .face{
-    width: 182px;
-    height: 80px;
+    width: 300px;
+    height: 131px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -127,6 +135,7 @@ main{
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     font-family: Recursive;
+    font-size: 18px;
 }
 
 .question{
@@ -148,11 +157,11 @@ main{
 }
 
 .box{
-    height: 24px;
-    width: 55px;
+    height: 40px;
+    width: 90px;
     border-radius: 5px;
     font-family: "Recursive";
-    font-size: 7px;
+    font-size: 12px;
     font-weight: 400;
     display: flex;
     justify-content: center;
@@ -179,14 +188,15 @@ main{
     position: absolute;
     top: 10px;
     left: 10px;
-    
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .question img{
     position: absolute;
     bottom: 10px;
     right: 10px;
+    width: 30px;
+    height: 20px;
 }
 #red{
     color: red;
@@ -197,8 +207,27 @@ main{
 footer{
     position: fixed;
     bottom: 0;
-    height: 50px;
+    height: 70px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
     background-color: #FFFFFF;
-    text-align: center;
+    font-family: Recursive;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.end{
+    height: 171px;
+}
+
+.smile{
+    display: flex;
+    justify-content: center;
+}
+.mark-hits{
+    display: flex;
 }

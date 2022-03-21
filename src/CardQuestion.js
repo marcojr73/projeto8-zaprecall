@@ -1,5 +1,7 @@
 import { useState } from "react";
+import FooterAnswers from "./FooterAnswers";
 let arr = [];
+let wrong = null;
 const deckStatic = [
     { questionsText: "Nome do professor?", answers: "Emmett Brown" },
     { questionsText: "Modelo do veiculo/máquina do tempo", answers: "DeLorean" },
@@ -44,8 +46,8 @@ function Question() {
                 if (pos === index) {
                     return (
                         <section onClick={() => setPos(pos = index)} className="card askTxt">
-                            <QuestionAskTxt 
-                            questions={deck} setRisk={setRisk} setCompleted={setCompleted} completed={completed} setHits={setHits} hits={hits}/>
+                            <QuestionAskTxt
+                                questions={deck} setRisk={setRisk} setCompleted={setCompleted} completed={completed} setHits={setHits} hits={hits} />
                         </section>)
                 } else {
                     return (
@@ -54,7 +56,7 @@ function Question() {
                         </section>)
                 }
             })}
-            <FooterAnswers counter={completed} hits={hits}/>
+            <FooterAnswers counter={completed} hits={hits} wrong={wrong} />
         </>
     )
 }
@@ -75,22 +77,25 @@ function QuestionAsk(props) {
     return (
         <div className="questions" id={color} >
             <p>{css} Pergunta {index + 1}</p>
-            <ion-icon name="play-outline"></ion-icon>
+            <ion-icon className="icon" name="play-outline"></ion-icon>
         </div>
     )
 }
 
 function QuestionAskTxt(props) {
-    let { questions, setRisk, setCompleted, completed, setHits} = props;
+    let { questions, setRisk, setCompleted, completed, setHits } = props;
     let [flip, setFlip] = useState("flip");
     let css = `${flip} card`;
-    let red = <img src="./assets/red.png"/>
-    let yellow = <img src="./assets/yellow.png"/>
-    let green = <img src="./assets/green.png"/>
-    
+    let red = <img src="./assets/red.png" />
+    let yellow = <img src="./assets/yellow.png" />
+    let green = <img src="./assets/green.png" />
+
     function update(color, completed, imgHit) {
         setRisk(color);
-        setCompleted(completed+1);
+        setCompleted(completed + 1);
+        if (color == "red") {
+            wrong = true;
+        }
         arr.push(imgHit);
         setHits([...arr]);
     }
@@ -104,21 +109,13 @@ function QuestionAskTxt(props) {
             <div className="answer face">
                 <p>{questions.answers}</p>
                 <div className="options">
-                    <div onClick={() => update("red",completed, red)} className="box wrong">Não lemprei</div>
-                    <div onClick={() => update("yellow",completed, yellow)} className="box almost">Quase Não lembrei</div>
-                    <div onClick={() => update("green",completed, green)} className="box zap">Zap</div>
+                    <div onClick={() => update("red", completed, red)} className="box wrong">Não lemprei</div>
+                    <div onClick={() => update("yellow", completed, yellow)} className="box almost">Quase Não lembrei</div>
+                    <div onClick={() => update("green", completed, green)} className="box zap">Zap</div>
                 </div>
             </div>
         </div>
     )
 }
 
-function FooterAnswers(props) {
-    return (
-        <footer>
-            <p>{props.counter}/8 Concluídos</p>
-            {props.hits}
-        </footer>
-    )
-}
 
