@@ -1,5 +1,6 @@
 import { useState } from "react";
 import FooterAnswers from "./FooterAnswers";
+import Header from "./Header";
 let arr = [];
 let wrong = null;
 const deckStatic = [
@@ -19,35 +20,31 @@ const deck = deckStatic.sort(() => {
 
 export default function CardQuestion() {
     return (
-        <nav className="screen deck">
+        <nav className="deck">
             <Header />
             <Question />
         </nav>
     )
 }
 
-function Header() {
-    return (
-        <header className="top">
-            <img className="light" src="./assets/light.png" alt="logo" />
-            <h1 className="zaprecall">ZapRecall</h1>
-        </header>
-    )
-}
-
 function Question() {
     let [pos, setPos] = useState(null);
-    let [risk, setRisk] = useState("");
     let [completed, setCompleted] = useState(0);
     let [hits, setHits] = useState([]);
+    let [risk, setRisk] = useState("");
     return (
         <>
             {deck.map((deck, index) => {
+            
                 if (pos === index) {
                     return (
                         <section onClick={() => setPos(pos = index)} className="card askTxt">
                             <QuestionAskTxt
-                                questions={deck} setRisk={setRisk} setCompleted={setCompleted} completed={completed} setHits={setHits} hits={hits} />
+                                questions={deck} setRisk={setRisk}
+                                setCompleted={setCompleted} 
+                                completed={completed} 
+                                setHits={setHits} 
+                                hits={hits} />
                         </section>)
                 } else {
                     return (
@@ -63,19 +60,20 @@ function Question() {
 
 function QuestionAsk(props) {
     let { index, css } = props;
-    let [select, setSelected] = useState(false);
-    console.log(css);
+    
+    // let [select, setSelected] = useState(false);
+    // console.log(css);
 
 
     // if (css !== "") {
     // setSelected(true);
+    // css="";
     // }
 
-
-    let color = select === true ? css : "";
+    let color = css !== "" ? `questions ${css}`: "questions"
 
     return (
-        <div className="questions" id={color} >
+        <div className={color}  id={css}>
             <p>{css} Pergunta {index + 1}</p>
             <ion-icon className="icon" name="play-outline"></ion-icon>
         </div>

@@ -8,7 +8,14 @@ body{
     align-items: center;
     justify-content: space-evenly;
     background-color: #FB6B6B;
-    height: 800px;
+    height: 950px;
+}
+.deck{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FB6B6B;
+    margin-bottom: 171px;
 }
 
 figure{
@@ -24,10 +31,11 @@ main{
     top: 0;
     left: 0;
     right: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 #light{
-    margin-top: 10%;
     width: 136px;
     height: 161px;
     margin-bottom: 10px;
@@ -60,7 +68,6 @@ main{
 
 .questions{
     background-color:  #FFFFFF;
-    margin-bottom: 5px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -81,10 +88,6 @@ ion-icon{
 
 /* ////////////////////////////////////////////////////////////// */
 
-.deck{
-    margin-top: 22px;
-}
-
 .light{
     height: 60px;   
     width: 52px;    
@@ -94,7 +97,8 @@ ion-icon{
 .top{
     display: flex;
     align-items: center;
-    /* margin-bottom: 41px; */
+    margin-bottom: 40px;
+    margin-top: 25px;
 }
 
 .top .zaprecall{
@@ -104,7 +108,7 @@ ion-icon{
 .card{
     display: flex;
     justify-content: center;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .ask{
@@ -145,6 +149,7 @@ ion-icon{
 .card{
     transform-style: preserve-3d;
     transition: all .8s;
+   
 }
 
 .flip{
@@ -172,17 +177,23 @@ ion-icon{
 }
 
 .wrong{background-color: #FF3030;} .almost{background-color: #FF922E;} .zap{background-color: #2FBE34;}
-#red{
+
+.red{
     text-decoration: line-through;
-    color: red;
+    color: #FF3030;
+    pointer-events: none;
 }
-#yellow{
+
+.yellow{
     text-decoration: line-through;
-    color: yellow;
+    color: #FF922E;
+    pointer-events: none;
 }
-#green{
+
+.green{
     text-decoration: line-through;
-    color: green;
+    color: #2FBE34;
+    pointer-events: none;
 }
 .question p{
     position: absolute;
@@ -230,4 +241,37 @@ footer{
 }
 .mark-hits{
     display: flex;
+}
+
+@media (min-width: 735px) {
+    .light{
+        width: 86px;
+        height: 100px;
+    }
+    .top .zaprecall{
+        font-size: 64px;
+    }
+    .askTxt{
+        width: 560px;
+        height: 90px;
+    }
+    .ask{
+        width: 560px;
+        height: 90px;
+    }
+    .face{
+        width: 560px;
+        height: 90px;
+    }
+    main{
+        height: 100vh;
+        overflow-y: scroll;
+    }
+    .questions p{
+        margin-right: 280px;
+        font-size: 24px;
+    }
+    ion-icon{
+        font-size: 40px;
+    }
 }
