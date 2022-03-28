@@ -64,10 +64,10 @@ function QuestionAsk(props) {
     console.log(css);
 
 
-    // if (css !== "") {
-    // setSelected(true);
-    // css="";
-    // }
+    if (css !== "") {
+    setSelected(true);
+    css="";
+    }
 
     let color = css !== "" ? `questions ${css}`: "questions"
     return (
