@@ -60,14 +60,6 @@ function Question() {
 
 function QuestionAsk(props) {
     let { index, css } = props;
-    let [select, setSelected] = useState(true);
-    console.log(css);
-
-
-    if (css !== "") {
-    setSelected(true);
-    css="";
-    }
 
     let color = css !== "" ? `questions ${css}`: "questions"
     return (
