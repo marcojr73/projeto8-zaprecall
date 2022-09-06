@@ -6,7 +6,7 @@
 </p>
 
 
-- E sempre assim, a gente aprende uma coisa e se não praticarmos rapidamente esquecemos
+- E sempre assim, a gente aprende uma coisa e se não praticarmos, rapidamente esquecemos
 - Agora, com o Zap Recall você pode fazer o recall daquele tema que você estudou pra não se esquecer mais 
 
 - [Veja meu deploy na Vercel aqui](https://projeto8-zaprecall-kohl.vercel.app/)
