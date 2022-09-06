@@ -18,7 +18,7 @@
 Instale meu projeto e suas dependências
 
 ```bash
-  git clone git@github.com:marcojr73/projeto5-batepapo-uol.git
+  git clone git@github.com:marcojr73/projeto8-zaprecall.git
   
   npm i
   
