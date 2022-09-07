@@ -4,14 +4,14 @@ import Header from "./Header";
 let arr = [];
 let wrong = null;
 const deckStatic = [
-    { questionsText: "Nome do professor?", answers: "Emmett Brown" },
-    { questionsText: "Modelo do veiculo/máquina do tempo", answers: "DeLorean" },
-    { questionsText: "Data que Martin chega no futuro no segundo filme", answers: "21 de outubro" },
-    { questionsText: "Marca da cueca de Martin?", answers: "Calvin Klein" },
-    { questionsText: "Velocidade necessária para se utilizar a máquina do tempo?", answers: "88 milhas p hora" },
-    { questionsText: "Nome do cachorro do professor?", answers: "Einstein" },
-    { questionsText: "Esporte preferido de martin?", answers: "Skate" },
-    { questionsText: "Acidente natural que permite martin voltar para o futuro?", answers: "Raio na torre" }
+    { questionsText: "Qual a diferença de React e ReactDOM?", answers: "React é uma ferramenta para construção de interfaces, ReactDOM permite manipular o DOM dentro dos componentes!" },
+    { questionsText: "Qual comando é usado para iniciar um projeto react localmente?", answers: "npm run start!" },
+    { questionsText: "O que é JSX?", answers: "Uma extensão de linguagem do JavaScript!" },
+    { questionsText: "Por quê usamos props?", answers: "Para passar diferentes informações para componentes!" },
+    { questionsText: "O que é o React?", answers: "Uma biblioteca JavaScript para construção de interfaces!" },
+    { questionsText: "Como se chama a prática de renderizar ou não um componente?", answers: "Renderização condicional!" },
+    { questionsText: "Qual hook deve ser utilizado para fazer request a uma API logo que o component é renderizado?", answers: "Use Effect!" },
+    { questionsText: "O que é o context api?", answers: "Um forma de gerenciar estados fora de seu componente!" }
 ]
 
 const deck = deckStatic.sort(() => {
@@ -35,7 +35,6 @@ function Question() {
     return (
         <>
             {deck.map((deck, index) => {
-            
                 if (pos === index) {
                     return (
                         <section onClick={() => setPos(pos = index)} className="card askTxt">

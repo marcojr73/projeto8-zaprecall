@@ -13,6 +13,13 @@
 
 ***
 
+# Demonstração
+
+<p align="center">
+   <img width=700 src="./src/images/app.gif"/>
+</p>
+
+
 ## Como usar
 
 Instale meu projeto e suas dependências
